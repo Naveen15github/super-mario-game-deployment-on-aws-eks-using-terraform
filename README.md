@@ -90,6 +90,7 @@ Now the EC2 instance has permissions to provision EKS.
 STEP 3: Cluster Provisioning
 Clone the project repo
 git clone https://github.com/Naveen15github/super-mario-game-deployment-on-aws-eks-using-terraform.git
+
 cd k8s-mario
 
 Make the script executable & run it
