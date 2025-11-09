@@ -2,7 +2,7 @@
 I deployed the classic Super Mario game on Amazon EKS using Kubernetes and Terraform. The goal was to combine cloud-native technologies with a nostalgic gaming experience, showcasing my hands-on skills in AWS, Kubernetes, and infrastructure automation.
 
 ### Architecture Digram
-![Alt Text](image-url)
+![Alt Text](https://github.com/Naveen15github/super-mario-game-deployment-on-aws-eks-using-terraform/blob/5688d8063e87c6baae4f77b49bd63654f4ca233a/supermario%20architecture%20diagram.png)
 
 ## 🧰 Prerequisites
 Before getting started, ensure the following:
@@ -45,7 +45,7 @@ Choose or upload your Key Pair
 
 Click Launch Instance
 
-![Alt Text](image-url)
+![Alt Text](https://github.com/Naveen15github/super-mario-game-deployment-on-aws-eks-using-terraform/blob/5688d8063e87c6baae4f77b49bd63654f4ca233a/Screenshot%20(113).png)
 
 
 Connect to the instance using its public IP and your key pair via MobaXterm or PuTTY.
@@ -56,7 +56,7 @@ Go to IAM → Roles
 
 Click Create Role
 
-![Alt Text](image-url)
+![Alt Text](https://github.com/Naveen15github/super-mario-game-deployment-on-aws-eks-using-terraform/blob/5688d8063e87c6baae4f77b49bd63654f4ca233a/Screenshot%20(114).png)
 
 
 Select:
@@ -81,11 +81,11 @@ Actions → Security → Modify IAM Role
 
 Choose the newly created role → Update
 
-![Alt Text](image-url)
+![Alt Text](https://github.com/Naveen15github/super-mario-game-deployment-on-aws-eks-using-terraform/blob/5688d8063e87c6baae4f77b49bd63654f4ca233a/Screenshot%20(115).png)
 
 
 Now the EC2 instance has permissions to provision EKS.
-![Alt Text](image-url)
+![Alt Text](https://github.com/Naveen15github/super-mario-game-deployment-on-aws-eks-using-terraform/blob/5688d8063e87c6baae4f77b49bd63654f4ca233a/Screenshot%20(116).png)
 
 STEP 3: Cluster Provisioning
 Clone the project repo
@@ -113,7 +113,7 @@ docker --version
 aws --version
 kubectl version --client
 terraform --version
-![Alt Text](image-url)
+![Alt Text](https://github.com/Naveen15github/super-mario-game-deployment-on-aws-eks-using-terraform/blob/5688d8063e87c6baae4f77b49bd63654f4ca233a/Screenshot%20(117).png)
 
 Provision EKS Cluster Using Terraform
 Move inside Terraform directory:
@@ -122,7 +122,7 @@ cd EKS-TF
 
 ⚠️ Important:
 Update the S3 bucket name in backend.tf
-![Alt Text](image-url)
+![Alt Text](https://github.com/Naveen15github/super-mario-game-deployment-on-aws-eks-using-terraform/blob/5688d8063e87c6baae4f77b49bd63654f4ca233a/Screenshot%20(118).png)
 
 Initialize Terraform:
 terraform init
@@ -131,13 +131,14 @@ Validate & Plan:
 terraform validate
 terraform plan
 
-![Alt Text](image-url)
+![Alt Text](https://github.com/Naveen15github/super-mario-game-deployment-on-aws-eks-using-terraform/blob/5688d8063e87c6baae4f77b49bd63654f4ca233a/Screenshot%20(119).png)
 
 
 Apply to create the cluster:
 terraform apply --auto-approve
 
-![Alt Text](image-url)
+![Alt Text](
+https://github.com/Naveen15github/super-mario-game-deployment-on-aws-eks-using-terraform/blob/5688d8063e87c6baae4f77b49bd63654f4ca233a/Screenshot%20(120).png)
 
 Cluster will be created in ~10 minutes.
 
@@ -160,12 +161,12 @@ kubectl get all
 Apply Service
 kubectl apply -f service.yaml
 kubectl get all
-![Alt Text](image-url)
+![Alt Text](https://github.com/Naveen15github/super-mario-game-deployment-on-aws-eks-using-terraform/blob/5688d8063e87c6baae4f77b49bd63654f4ca233a/Screenshot%20(121).png)
 
 Get LoadBalancer URL
 kubectl describe service mario-service
 
-![Alt Text](image-url)
+![Alt Text](https://github.com/Naveen15github/super-mario-game-deployment-on-aws-eks-using-terraform/blob/5688d8063e87c6baae4f77b49bd63654f4ca233a/Screenshot%20(122).png)
 
 
 Copy the LoadBalancer Ingress URL → Paste into your browser.
@@ -181,7 +182,7 @@ kubectl delete deployment mario-deployment
 Destroy EKS Cluster
 cd EKS-TF
 terraform destroy --auto-approve
-![Alt Text](image-url)
+![Alt Text](https://github.com/Naveen15github/super-mario-game-deployment-on-aws-eks-using-terraform/blob/5688d8063e87c6baae4f77b49bd63654f4ca233a/Screenshot%20(123).png)
 
 
 All resources will be removed within ~10 minutes.
