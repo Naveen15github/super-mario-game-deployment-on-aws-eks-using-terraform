@@ -173,7 +173,7 @@ Copy the LoadBalancer Ingress URL → Paste into your browser.
 
 🎉 Super Mario is LIVE!
 Enjoy playing the 1985 classic using modern Kubernetes infrastructure.
-![Alt Text]()
+![Alt Text](https://github.com/Naveen15github/super-mario-game-deployment-on-aws-eks-using-terraform/blob/1b170ef97b6a07df531ebf4f5fa2f880973d5091/IMG_5277.PNG)
 
 🧹 Destruction (Clean Up)
 Delete Deployment & Service
