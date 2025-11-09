@@ -173,6 +173,7 @@ Copy the LoadBalancer Ingress URL → Paste into your browser.
 
 🎉 Super Mario is LIVE!
 Enjoy playing the 1985 classic using modern Kubernetes infrastructure.
+![Alt Text]()
 
 🧹 Destruction (Clean Up)
 Delete Deployment & Service
